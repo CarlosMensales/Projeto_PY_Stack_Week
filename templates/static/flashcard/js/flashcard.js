@@ -1,10 +1,10 @@
-function flip_card(id){
+function flip_card(id) {
     card = document.getElementById(id)
-
-    if (card.style.display == 'none' || card.style.display == ''){
+    console.log(card)
+    if (card.style.display == "none" || card.style.display == "") {
         card.style.display = "block"
-    }else{
-        card.style.display = 'none'
+    } else {
+        card.style.display = "none"
     }
 
 }

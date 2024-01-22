@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block 'cabecalho' %}
 <link href="{% static 'usuarios/css/cadastro.css' %}" rel="stylesheet">
 {% endblock %}
+
 {% block 'conteudo' %}
+
 <div class="bg1">
     <div class="container">
         <div class="row">
@@ -41,7 +44,7 @@
                     </section>
                     {% endfor %}
                     {% endif %}
-                    <form action="{% url 'login' %}" method="POST"> {% csrf_token %}
+                    <form action="{% url 'logar' %}" method="POST">{% csrf_token %}
                         <label>Username</label>
                         <input type="text" class="input-form" name="username" id="">
                         <br>
@@ -57,8 +60,10 @@
                         <br>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
+
 {% endblock 'conteudo' %}

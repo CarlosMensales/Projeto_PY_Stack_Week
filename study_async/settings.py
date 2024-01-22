@@ -1,7 +1,6 @@
-from pathlib import Path
 from django.contrib.messages import constants
+from pathlib import Path
 import os
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -10,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-re0%i8zb+2hr6e5l0uku5iqie@2*15dsgbouz)p493mn0fhib&'
+SECRET_KEY = 'django-insecure-lz_f2sh20d^1146fk4y-o8%5=(db39i$li+t9)xxu&nsv3=9%*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'usuarios',
     'flashcard',
+    'apostilas'
 ]
 
 MIDDLEWARE = [
@@ -95,9 +95,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -110,23 +110,21 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
 STATIC_ROOT = os.path.join('static')
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-#Messages
-
+# Messages
 
 MESSAGE_TAGS = {
- constants.DEBUG: 'alert-primary',
- constants.ERROR: 'alert-danger',
- constants.SUCCESS: 'alert-success',
- constants.INFO: 'alert-info',
- constants.WARNING: 'alert-warning',
+    constants.DEBUG: 'alert-primary',
+    constants.ERROR: 'alert-danger',
+    constants.SUCCESS: 'alert-success',
+    constants.INFO: 'alert-info',
+    constants.WARNING: 'alert-warning',
 }
